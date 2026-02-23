@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Habilidades from '../components/Habilidades.jsx';
+import Proyectos from '../components/Proyectos.jsx';
+import Contacto from '../components/Contacto.jsx';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tu Nombre | Frontend Developer">
+  <Hero />
+  <About />
+  <Habilidades client:load />
+  <Proyectos client:load />
+  <Contacto client:load />
+
+  <footer style="
+    text-align:center;
+    padding: 28px 20px;
+    border-top: 1px solid rgba(0,200,255,0.08);
+    color: rgba(232,240,254,0.25);
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  ">
+    &copy; 2025 Jose Jaita &mdash; Construido con Astro, React &amp; Tailwind
+  </footer>
 </Layout>
